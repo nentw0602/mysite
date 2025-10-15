@@ -138,6 +138,32 @@
       gap: 5px;
     }
 
+    /* Section block */
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .feature img {
+      width: 45%;
+      border-radius: 10px;
+    }
+
+    .feature-text {
+      width: 50%;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+    }
+
     /* 手機版 */
     @media (max-width: 768px) {
       .hero {
@@ -161,6 +187,13 @@
       }
       section {
         padding: 50px 20px;
+      }
+      .feature {
+        flex-direction: column;
+        text-align: center;
+      }
+      .feature img, .feature-text {
+        width: 100%;
       }
     }
   </style>
@@ -191,12 +224,52 @@
     </div>
   </section>
 
-  <!-- JOIN SECTION -->
-  <section id="join">
-    <h2 style="text-align:center;">Join the Social Media System Today</h2>
-    <p style="text-align:center;">Get access to our proven blueprint and automation tools to start building your first profitable channel — faster than ever.</p>
+  <!-- SECTION 1 -->
+  <section>
+    <h2>The $5,000/Month Opportunity Hiding in Plain Sight</h2>
+    <p>Every single day, billions of people scroll through TikTok, Instagram Reels, and YouTube Shorts — yet less than 1% of them are actually earning money from it. The truth is, most creators are stuck chasing virality instead of building systems that pay them daily.</p>
+    <p>But a small group of creators discovered how to use automation, AI, and smart content structures to earn consistently — without relying on luck, fame, or followers.</p>
   </section>
 
+  <!-- SECTION 2 -->
+  <section class="feature">
+    <div class="feature-text">
+      <h3>Automated Content System</h3>
+      <p>Use AI tools to create engaging short-form videos in minutes. No editing experience needed. Just plug in your idea, and let automation do the heavy lifting — so you can focus on scaling your account, not cutting clips.</p>
+    </div>
+    <img src="images/auto-system.gif" alt="Automated System">
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="feature">
+    <div class="feature-text">
+      <h3>Expert Support</h3>
+      <p>Get personalized help from experienced content creators who already built profitable social media systems. Whether you're a beginner or scaling multiple accounts, our team helps you move faster — without wasting months figuring it out alone.</p>
+    </div>
+    <img src="images/expert.gif" alt="Expert Support">
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="feature">
+    <div class="feature-text">
+      <h3>Real Results</h3>
+      <p>From freelancers to students, members of our community are consistently generating income through faceless, automated content — powered by a simple system anyone can follow. Your success can be next.</p>
+    </div>
+    <img src="images/results.gif" alt="Real Results">
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="join" style="text-align:center;">
+    <h2>Join the Social Media System Today</h2>
+    <p>Get step-by-step access to our full training, automation tools, and expert mentorship designed to help you build your first profitable social media channel — fast.</p>
+
+    <button class="cta-button" onclick="window.location.href='YOUR_LINK_HERE'">
+      Yes! I Want Access Now!
+      <small>Backed By Our 365-Day Guarantee*</small>
+    </button>
+  </section>
+
+  <!-- FOOTER -->
   <footer style="text-align:center; padding:40px 0; font-size:12px; color:#5c4b4b;">
     <p>Privacy Policy | Terms | Refund Policy</p>
     <p>© 2025 Social Media System. All rights reserved.</p>
@@ -204,3 +277,4 @@
 
 </body>
 </html>
+'
