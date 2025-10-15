@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Social Media System</title>
   <style>
     body {
       background-color: #faf6f2;
       color: #2d1c1c;
-      font-family: "Arial", sans-serif;
+      font-family: "Inter", Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
 
-    h1, h2, h3 {
-      color: #2d1c1c;
-    }
-
     section {
       max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #2d1c1c;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    p {
+      color: #4b3e3e;
+      font-size: 18px;
+      margin-bottom: 18px;
     }
 
     /* HERO 區 */
     .hero {
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 80px 20px 60px;
     }
 
     .hero h1 {
       font-size: 34px;
-      line-height: 1.3;
+      max-width: 750px;
+      margin: 0 auto 20px;
     }
 
     .hero p {
       font-size: 18px;
       color: #5c4b4b;
       margin-bottom: 30px;
+    }
+
+    .video-frame {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.45);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .play-overlay span {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .play-overlay .play-btn {
+      font-size: 50px;
+      line-height: 0;
     }
 
     .cta-button {
@@ -93,59 +138,47 @@
       gap: 5px;
     }
 
-    /* 圖文區（GIF + 說明） */
-    .feature {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-    }
-
-    .feature img {
-      width: 45%;
-      border-radius: 10px;
-    }
-
-    .feature-text {
-      width: 50%;
-    }
-
-    .feature h3 {
-      margin-top: 0;
-    }
-
-    /* 按鈕滾動目標 */
-    #join {
-      scroll-margin-top: 80px;
-    }
-
     /* 手機版 */
     @media (max-width: 768px) {
-      .feature {
-        flex-direction: column;
-        text-align: center;
+      .hero {
+        padding: 60px 20px;
       }
-      .feature img, .feature-text {
-        width: 100%;
+      .hero h1 {
+        font-size: 22px;
+        line-height: 1.35;
+      }
+      .hero p {
+        font-size: 14px;
+        margin-bottom: 20px;
       }
       .cta-button {
         font-size: 16px;
         padding: 14px 30px;
+        border-radius: 40px;
+      }
+      .cta-button small {
+        font-size: 12px;
+      }
+      section {
+        padding: 50px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
     <h1>New System Reveals How to Start a Profitable Social Media Channel That Generates $5,000/Month — Even If You’re Starting From Zero.</h1>
     <p>Without Spending on Ads. Without Building a Personal Brand. Without Needing Followers.</p>
+
+    <div class="video-frame">
+      <div class="play-overlay" onclick="window.location.href='YOUR_VIDEO_LINK'">
+        <span>TAP HERE<br>PLAY VIDEO</span>
+        <div class="play-btn">▶️</div>
+      </div>
+    </div>
+
     <button class="cta-button" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">
       Yes! I Want Access Now!
       <small>Backed By Our 365-Day Guarantee*</small>
@@ -158,65 +191,12 @@
     </div>
   </section>
 
-  <!-- Section 1 -->
-  <section>
-    <h2>The $5,000/Month Opportunity Hiding in Plain Sight</h2>
-    <p>Every single day, billions of people scroll through TikTok, Instagram Reels, and YouTube Shorts — yet less than 1% of them are actually earning money from it. The truth is, most creators are stuck chasing virality instead of building systems that pay them daily.</p>
-    <p>But a small group of creators discovered how to use automation, AI, and smart content structures to earn consistently — without relying on luck, fame, or followers.</p>
-  </section>
-
-  <!-- Section 2: GIF block 1 -->
-  <section class="feature">
-    <div class="feature-text">
-      <h3>Automated Content System</h3>
-      <p>Use AI tools to create engaging short-form videos in minutes. No editing experience needed. Just plug in your idea, and let automation do the heavy lifting — so you can focus on scaling your account, not cutting clips.</p>
-    </div>
-    <img src="images/auto-system.gif" alt="Automated System">
-  </section>
-
-  <!-- Section 3 -->
-  <section>
-    <h2>Why Short Videos Are Taking Over</h2>
-    <p>People’s attention spans are shorter than ever. Platforms are pushing bite-sized, dopamine-rich content — and rewarding creators who adapt. The shift from long videos to short clips created a brand new market where even small accounts can reach millions organically.</p>
-    <p>That’s why this moment matters. The earlier you understand how to ride this wave, the faster you’ll grow before the market saturates.</p>
-  </section>
-
-  <!-- Section 4: GIF block 2 -->
-  <section class="feature">
-    <div class="feature-text">
-      <h3>Expert Support</h3>
-      <p>Get personalized help from experienced content creators who already built profitable social media systems. Whether you're a beginner or scaling multiple accounts, our team helps you move faster — without wasting months figuring it out alone.</p>
-    </div>
-    <img src="images/expert.gif" alt="Expert Support">
-  </section>
-
-  <!-- Section 5 -->
-  <section>
-    <h2>What Makes This Different</h2>
-    <p>This isn’t about luck, trends, or hype. It’s a clear, replicable system that combines automation tools with proven monetization models — so you can finally build income streams that run even when you’re offline.</p>
-  </section>
-
-  <!-- Section 6: GIF block 3 -->
-  <section class="feature">
-    <div class="feature-text">
-      <h3>Real Results</h3>
-      <p>From freelancers to students, members of our community are consistently generating income through faceless, automated content — powered by a simple system anyone can follow. Your success can be next.</p>
-    </div>
-    <img src="images/results.gif" alt="Real Results">
-  </section>
-
-  <!-- Section 7 (Join) -->
+  <!-- JOIN SECTION -->
   <section id="join">
-    <h2>Join the Social Media System Today</h2>
-    <p>Get step-by-step access to our full training, automation tools, and expert mentorship designed to help you build your first profitable social media channel — fast.</p>
-
-    <button class="cta-button" onclick="window.location.href='YOUR_LINK_HERE'">
-      Yes! I Want Access Now!
-      <small>Backed By Our 365-Day Guarantee*</small>
-    </button>
+    <h2 style="text-align:center;">Join the Social Media System Today</h2>
+    <p style="text-align:center;">Get access to our proven blueprint and automation tools to start building your first profitable channel — faster than ever.</p>
   </section>
 
-  <!-- Footer -->
   <footer style="text-align:center; padding:40px 0; font-size:12px; color:#5c4b4b;">
     <p>Privacy Policy | Terms | Refund Policy</p>
     <p>© 2025 Social Media System. All rights reserved.</p>
